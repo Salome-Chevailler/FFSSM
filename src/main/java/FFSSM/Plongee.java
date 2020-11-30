@@ -18,7 +18,7 @@ public class Plongee {
 
 	public int duree;
         
-        private HashSet<Plongeur> lesPlongeurs = new HashSet<>();
+        public HashSet<Plongeur> lesPlongeurs = new HashSet<>();
 
 	public Plongee(Site lieu, Moniteur chefDePalanquee, LocalDate date, int profondeur, int duree) {
 		this.lieu = lieu;
@@ -44,7 +44,6 @@ public class Plongee {
 	 * @return vrai si la plongée est conforme
 	 */
 	public boolean estConforme() {
-		// TODO: Implémenter cette méthode
                 for (Plongeur p : lesPlongeurs){
                     int nbLicences = p.lesLicences.size();
                     for (int i = nbLicences-1;i>0;i--){
